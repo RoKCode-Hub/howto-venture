@@ -1,4 +1,4 @@
-import handsImage from "@/assets/hands-support.jpg";
+import approachImage from "@/assets/approach-image.png";
 
 const ApproachSection = () => {
   return (
@@ -37,7 +37,7 @@ const ApproachSection = () => {
         {/* Right Column - Image */}
         <div className="relative min-h-[600px] md:min-h-full">
           <img
-            src={handsImage}
+            src={approachImage}
             alt="Partnership and support"
             className="absolute inset-0 w-full h-full object-cover"
           />
