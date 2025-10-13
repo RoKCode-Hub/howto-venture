@@ -14,9 +14,9 @@ const testimonials = [
     website: "https://gronda.com/",
   },
   {
-    quote: '"Working with Robin has been transformative for our startup. His strategic insights and hands-on approach have helped us navigate complex challenges and unlock new opportunities for growth."',
-    author: "Michael, Founder & CEO TechStart",
-    website: "https://www.techstart.io/",
+    quote: '"Personally, my growth as a leader owes much to his support. He challenges me effectively, contributing significantly to both my professional and personal development."',
+    author: "Ambros, CEO & Founder WeDesignTrips and ASI GmbH",
+    website: "https://www.asi-reisen.de/",
   },
 ];
 
