@@ -9,14 +9,14 @@ const testimonials = [
     website: "https://www.empion.io/",
   },
   {
+    quote: '"Robin is a true coach, which asks the right questions at the right time and an outstanding sparring-partner. Without him, our business wouldn\'t be where it is right now. If you are struggling to build the right structure and mindset for a fast-growing company and you have the chance to work with Robin, do it. He helped us not just to build a scalable structure, but also hire A-players every company needs to grow fast"',
+    author: "Valentin, CEO & Co-Founder Gronda",
+    website: "https://gronda.com/",
+  },
+  {
     quote: '"Working with Robin has been transformative for our startup. His strategic insights and hands-on approach have helped us navigate complex challenges and unlock new opportunities for growth."',
     author: "Michael, Founder & CEO TechStart",
     website: "https://www.techstart.io/",
-  },
-  {
-    quote: '"Robin brings a unique combination of strategic thinking and practical execution. His guidance has been instrumental in scaling our operations and building a strong leadership team."',
-    author: "Sarah, Co-Founder InnovateLab",
-    website: "https://www.innovatelab.com/",
   },
 ];
 
