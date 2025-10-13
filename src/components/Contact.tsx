@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { MapPin, Mail, Phone } from "lucide-react";
 import { z } from "zod";
 import { useToast } from "@/hooks/use-toast";
-import emailjs from "@emailjs/browser";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, { message: "Name is required" }).max(100, { message: "Name must be less than 100 characters" }),
@@ -23,34 +22,15 @@ const Contact = () => {
     message: "",
   });
   const [errors, setErrors] = useState<Partial<Record<keyof ContactForm, string>>>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
     try {
       contactSchema.parse(formData);
       setErrors({});
-      setIsSubmitting(true);
       
-      // EmailJS configuration - Replace these with your actual values
-      const serviceId = "YOUR_SERVICE_ID";
-      const templateId = "YOUR_TEMPLATE_ID";
-      const publicKey = "YOUR_PUBLIC_KEY";
-      
-      await emailjs.send(
-        serviceId,
-        templateId,
-        {
-          from_name: formData.name,
-          from_email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-          to_email: "contact@howto-venture.com",
-        },
-        publicKey
-      );
-      
+      // Here you would normally send the form data to your backend
       toast({
         title: "Message sent!",
         description: "We'll get back to you soon.",
@@ -72,15 +52,7 @@ const Contact = () => {
           }
         });
         setErrors(newErrors);
-      } else {
-        toast({
-          title: "Error",
-          description: "Failed to send message. Please try again.",
-          variant: "destructive",
-        });
       }
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
@@ -212,10 +184,9 @@ const Contact = () => {
 
               <button
                 type="submit"
-                disabled={isSubmitting}
-                className="bg-accent hover:bg-accent/90 text-white font-semibold px-12 py-3 text-base rounded-full transition-all font-quicksand disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-accent hover:bg-accent/90 text-white font-semibold px-12 py-3 text-base rounded-full transition-all font-quicksand"
               >
-                {isSubmitting ? "Sending..." : "Send"}
+                Send
               </button>
             </form>
           </div>
