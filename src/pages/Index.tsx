@@ -1,5 +1,4 @@
 import Navigation from "@/components/Navigation";
-import Hero from "@/components/Hero";
 import About from "@/components/About";
 import FocusAreas from "@/components/FocusAreas";
 import ApproachSection from "@/components/ApproachSection";
@@ -11,7 +10,6 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      <Hero />
       <About />
       <FocusAreas />
       <ApproachSection />
