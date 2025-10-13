@@ -9,38 +9,38 @@ const Hero = () => {
   };
 
   return (
-    <section id="home" className="relative mt-[72px] overflow-hidden bg-white">
-      <div className="relative min-h-[720px] flex items-center">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0 w-[65%]">
+    <section id="home" className="relative overflow-hidden bg-white">
+      <div className="relative min-h-screen flex items-center">
+        {/* Grayscale Mountain Background */}
+        <div className="absolute inset-0 z-0">
           <img
             src={heroImage}
             alt="Mountain landscape with climbers"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover grayscale"
           />
         </div>
 
-        {/* Coral Accent Shape - exact from Wix */}
+        {/* Diagonal Coral Accent - positioned on the right */}
         <div 
-          className="absolute right-0 top-0 h-full w-[35%] bg-accent z-10" 
+          className="absolute right-0 top-0 bottom-0 w-[45%] bg-accent z-10"
+          style={{
+            clipPath: 'polygon(20% 0, 100% 0, 100% 100%, 0% 100%)'
+          }}
         />
 
         {/* Content */}
-        <div className="container mx-auto px-6 relative z-20">
-          <div className="max-w-xl">
-            <h1 className="text-[43px] leading-tight font-quicksand font-bold text-navy-dark mb-10">
+        <div className="container mx-auto px-6 relative z-20 pt-32">
+          <div className="max-w-2xl">
+            <h1 className="text-5xl lg:text-6xl leading-tight font-bold text-primary mb-10">{/* Larger text */}
               Passionately driven to<br />
               help founders and visionaries<br />
               <span className="text-accent">achieve their wildest dreams</span>
             </h1>
             <button
               onClick={scrollToAbout}
-              className="bg-accent hover:bg-accent/90 text-white font-semibold px-12 py-4 text-sm tracking-wider rounded-full transition-all uppercase inline-flex items-center gap-2"
+              className="bg-accent hover:bg-accent/90 text-white font-semibold px-10 py-4 text-sm tracking-wider rounded-full transition-all uppercase"
             >
               LEARN MORE
-              <svg width="20" height="20" viewBox="0 0 60 60" fill="currentColor">
-                <path d="M46.5 28.9L20.6 3c-.6-.6-1.6-.6-2.2 0l-4.8 4.8c-.6.6-.6 1.6 0 2.2l19.8 20-19.9 19.9c-.6.6-.6 1.6 0 2.2l4.8 4.8c.6.6 1.6.6 2.2 0l21-21 4.8-4.8c.8-.6.8-1.6.2-2.2z"></path>
-              </svg>
             </button>
           </div>
         </div>
