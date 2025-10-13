@@ -38,7 +38,7 @@ const Navigation = () => {
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8 md:ml-12 lg:ml-20">
+          <div className="hidden md:flex items-center gap-8 flex-1 justify-center md:ml-32 lg:ml-48">
             {navItems.map((item, index) => (
               <button
                 key={item.href}
