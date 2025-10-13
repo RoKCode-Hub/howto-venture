@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 
@@ -38,8 +39,8 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-5">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <button
-            onClick={() => scrollToSection("#home")}
+          <Link
+            to="/"
             className="flex items-center"
           >
             <img 
@@ -47,7 +48,7 @@ const Navigation = () => {
               alt="How to Venture logo" 
               className="h-10 w-auto"
             />
-          </button>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8 flex-1 justify-center md:ml-32 lg:ml-48">
