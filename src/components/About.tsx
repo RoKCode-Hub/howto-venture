@@ -1,30 +1,39 @@
 import profileImage from "@/assets/profile.jpg";
+import aboutGraphic from "@/assets/about-graphic.png";
 
 const About = () => {
   return (
-    <section id="about" className="py-24 bg-navy-dark">
+    <section id="about" className="py-20 bg-navy-dark">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Profile Image */}
-          <div className="relative">
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-accent opacity-30 rounded-lg" />
+        <div className="grid md:grid-cols-2 gap-16 items-center">
+          {/* Profile Image with coral accent */}
+          <div className="relative flex items-center justify-center">
             <img
               src={profileImage}
-              alt="Professional consultant profile"
-              className="relative z-10 rounded-lg shadow-2xl w-full max-w-md mx-auto"
+              alt="Professional profile"
+              className="relative z-10 rounded-none shadow-2xl w-full max-w-md"
+            />
+            <img
+              src={aboutGraphic}
+              alt=""
+              className="absolute bottom-0 right-0 w-48 h-auto opacity-80 translate-x-8 translate-y-8"
             />
           </div>
 
           {/* Content */}
-          <div className="text-primary-foreground">
+          <div className="text-white">
             <h2 className="text-4xl md:text-5xl font-bold mb-8">About</h2>
             <div className="space-y-6 text-lg leading-relaxed">
               <p>
-                We help entrepreneurs and visionaries realize their greatest entrepreneurial
-                aspirations. We do this by working with them to optimise their start up operating
-                system. Success-proven, scalable, and people-centered.
+                We help entrepreneurs and visionaries realize their greatest entrepreneurial aspirations.
               </p>
-              <p className="font-semibold">
+              <p>
+                We do this by working with them to optimise their start up operating system.
+              </p>
+              <p>
+                Success-proven, scalable, and people-centered.
+              </p>
+              <p className="font-semibold pt-4">
                 In this, we serve as sparring partners, consultants and interim chief of staff.
               </p>
             </div>
