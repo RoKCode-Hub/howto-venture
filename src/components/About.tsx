@@ -12,7 +12,7 @@ const About = () => {
             className="w-full h-full object-cover"
           />
           {/* Orange diagonal accent overlay */}
-          <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/40 origin-top-right transform skew-x-[-15deg] translate-x-[115%]"></div>
+          <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/40 origin-top-right transform skew-x-[-10deg] translate-x-[115%]"></div>
         </div>
 
         {/* Right Column - Content */}
