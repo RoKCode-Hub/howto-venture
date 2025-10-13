@@ -1,9 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navItems = [
     { label: "Home", href: "#home" },
@@ -22,7 +32,9 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent">{/* Transparent background to overlay on hero */}
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-md' : 'bg-white/80 backdrop-blur-sm'
+    }`}>
       <div className="container mx-auto px-6 py-5">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -46,7 +58,9 @@ const Navigation = () => {
                 className={`font-medium transition-colors ${
                   index === 0 
                     ? 'text-accent' 
-                    : 'text-foreground hover:text-accent'
+                    : isScrolled 
+                      ? 'text-primary hover:text-accent'
+                      : 'text-primary hover:text-accent'
                 }`}
               >
                 {item.label}
@@ -60,9 +74,9 @@ const Navigation = () => {
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? (
-              <X className="w-6 h-6 text-foreground" />
+              <X className={`w-6 h-6 ${isScrolled ? 'text-primary' : 'text-primary'}`} />
             ) : (
-              <Menu className="w-6 h-6 text-foreground" />
+              <Menu className={`w-6 h-6 ${isScrolled ? 'text-primary' : 'text-primary'}`} />
             )}
           </button>
         </div>
