@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,29 +21,51 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
-      <div className="container mx-auto px-6 py-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
+      <div className="container mx-auto px-6 py-5">
         <div className="flex items-center justify-between">
-          {/* Logo */}
+          {/* Logo - exact match to original */}
           <button
             onClick={() => scrollToSection("#home")}
-            className="flex items-center gap-2 group"
+            className="flex items-center gap-1 group relative"
           >
-            <div className="relative">
-              <div className="text-2xl font-bold text-primary">
-                how<span className="text-accent">to</span>
+            {/* Mountain peak accent */}
+            <svg 
+              width="24" 
+              height="24" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg"
+              className="absolute -left-6 top-1"
+            >
+              <path 
+                d="M12 3L6 12h12L12 3z" 
+                fill="#FF6B6B" 
+                stroke="#FF6B6B" 
+                strokeWidth="1"
+              />
+            </svg>
+            
+            <div className="flex flex-col leading-none">
+              <div className="flex items-baseline gap-0.5">
+                <span className="text-xl font-bold text-navy-dark">how</span>
+                <span className="text-xl font-bold text-accent">to</span>
               </div>
-              <div className="text-sm font-medium text-foreground -mt-1">venture</div>
+              <span className="text-sm font-medium text-navy-dark -mt-0.5">venture</span>
             </div>
           </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
+            {navItems.map((item, index) => (
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="text-foreground hover:text-accent transition-colors font-medium"
+                className={`font-medium transition-colors ${
+                  index === 0 
+                    ? 'text-accent' 
+                    : 'text-foreground hover:text-accent'
+                }`}
               >
                 {item.label}
               </button>
@@ -52,24 +73,30 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="md:hidden"
+          <button
+            className="md:hidden p-2"
             onClick={() => setIsOpen(!isOpen)}
           >
-            {isOpen ? <X /> : <Menu />}
-          </Button>
+            {isOpen ? (
+              <X className="w-6 h-6 text-foreground" />
+            ) : (
+              <Menu className="w-6 h-6 text-foreground" />
+            )}
+          </button>
         </div>
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden pt-4 pb-2">
-            {navItems.map((item) => (
+          <div className="md:hidden pt-4 pb-2 border-t border-border mt-4">
+            {navItems.map((item, index) => (
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
-                className="block w-full text-left py-2 text-foreground hover:text-accent transition-colors font-medium"
+                className={`block w-full text-left py-3 font-medium transition-colors ${
+                  index === 0 
+                    ? 'text-accent' 
+                    : 'text-foreground hover:text-accent'
+                }`}
               >
                 {item.label}
               </button>
