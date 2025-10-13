@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,35 +25,16 @@ const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent">{/* Transparent background to overlay on hero */}
       <div className="container mx-auto px-6 py-5">
         <div className="flex items-center justify-between">
-          {/* Logo - exact match to original */}
+          {/* Logo */}
           <button
             onClick={() => scrollToSection("#home")}
-            className="flex items-center gap-1 group relative"
+            className="flex items-center"
           >
-            {/* Mountain peak accent */}
-            <svg 
-              width="24" 
-              height="24" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              xmlns="http://www.w3.org/2000/svg"
-              className="absolute -left-6 top-1"
-            >
-              <path 
-                d="M12 3L6 12h12L12 3z" 
-                fill="#FF6B6B" 
-                stroke="#FF6B6B" 
-                strokeWidth="1"
-              />
-            </svg>
-            
-            <div className="flex flex-col leading-none">
-              <div className="flex items-baseline gap-0.5">
-                <span className="text-xl font-bold text-navy-dark">how</span>
-                <span className="text-xl font-bold text-accent">to</span>
-              </div>
-              <span className="text-sm font-medium text-navy-dark -mt-0.5">venture</span>
-            </div>
+            <img 
+              src={logo} 
+              alt="How to Venture logo" 
+              className="h-10 w-auto"
+            />
           </button>
 
           {/* Desktop Navigation */}
