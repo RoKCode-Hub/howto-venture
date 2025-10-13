@@ -1,44 +1,47 @@
-import profileImage from "@/assets/profile.jpg";
-import aboutGraphic from "@/assets/about-graphic.png";
+import profileImage from "@/assets/about-profile.jpg";
 
 const About = () => {
   return (
-    <section id="about" className="py-24 bg-navy-dark">
-      <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
-          {/* Profile Image with graphic overlay */}
-          <div className="relative">
-            <div className="relative w-full">
-              <img
-                src={profileImage}
-                alt="Professional profile"
-                className="w-full h-auto object-cover"
-              />
-              <img
-                src={aboutGraphic}
-                alt=""
-                className="absolute -bottom-12 -right-12 w-64 h-auto"
-              />
-            </div>
-          </div>
+    <section id="about" className="relative overflow-hidden">
+      <div className="grid md:grid-cols-2">
+        {/* Left Column - Image */}
+        <div className="relative min-h-[600px] md:min-h-full bg-black">
+          <img
+            src={profileImage}
+            alt="Professional profile"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          {/* Coral diagonal accent */}
+          <div 
+            className="absolute bottom-0 right-0 w-64 h-64 bg-accent opacity-90"
+            style={{
+              clipPath: 'polygon(0 100%, 100% 0, 100% 100%)'
+            }}
+          />
+        </div>
 
-          {/* Content */}
-          <div className="text-white">
-            <h2 className="text-[43px] font-quicksand font-bold mb-8">About</h2>
-            <div className="space-y-6 text-base leading-relaxed font-quicksand">
+        {/* Right Column - Content */}
+        <div className="bg-navy-dark text-white py-24 px-12 lg:px-20">
+          <div className="max-w-xl">
+            <h2 className="text-[43px] font-quicksand font-bold mb-12">About</h2>
+
+            <div className="space-y-8 text-base leading-relaxed font-quicksand">
               <p>
                 We help entrepreneurs and visionaries realize their greatest entrepreneurial aspirations.
               </p>
+
               <p>
                 We do this by working with them to optimise their start up operating system.
               </p>
+
               <p>
                 Success-proven, scalable, and people-centered.
               </p>
+
+              <p>
+                In this, we serve as sparring partners, consultants and interim chief of staff.
+              </p>
             </div>
-            <p className="mt-8 font-semibold text-base leading-relaxed font-quicksand">
-              In this, we serve as sparring partners, consultants and interim chief of staff.
-            </p>
           </div>
         </div>
       </div>
