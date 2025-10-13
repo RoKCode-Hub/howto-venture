@@ -108,12 +108,12 @@ const Contact = () => {
             </div>
 
             <div className="mt-16 space-y-3">
-              <a 
-                href="#" 
+              <Link 
+                to="/imprint" 
                 className="block text-base font-quicksand hover:text-accent transition-colors underline"
               >
                 Imprint
-              </a>
+              </Link>
               <Link 
                 to="/privacy-policy" 
                 className="block text-base font-quicksand hover:text-accent transition-colors underline"
