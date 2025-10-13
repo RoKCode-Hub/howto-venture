@@ -9,14 +9,7 @@ const About = () => {
           <img
             src={profileImage}
             alt="Professional portrait"
-            className="w-full h-full object-cover grayscale"
-          />
-          {/* Coral diagonal accent overlay */}
-          <div 
-            className="absolute bottom-0 right-0 w-80 h-80 bg-accent"
-            style={{
-              clipPath: 'polygon(0 100%, 100% 0, 100% 100%)'
-            }}
+            className="w-full h-full object-cover"
           />
         </div>
 
