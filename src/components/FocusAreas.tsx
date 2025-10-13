@@ -25,20 +25,27 @@ const FocusAreas = () => {
   ];
 
   return (
-    <section id="focus" className="py-24 bg-white">
+    <section id="focus" className="py-24 bg-secondary/30">
       <div className="container mx-auto px-6">
-        <h2 className="text-[43px] font-quicksand font-bold text-center mb-20 text-navy-dark">
+        <h2 className="text-[43px] font-quicksand font-bold mb-16 text-primary">
           Focus areas
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-16 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {areas.map((area, index) => (
-            <div key={index} className="text-center">
-              <div className="inline-flex items-center justify-center w-40 h-40 mb-8">
+            <div 
+              key={index} 
+              className="bg-white rounded-3xl p-12 shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div className="flex items-center justify-center w-40 h-40 mb-8 mx-auto">
                 <img src={area.icon} alt={area.title} className="w-full h-full object-contain" />
               </div>
-              <h3 className="text-[43px] font-quicksand font-bold mb-6 text-navy-dark leading-tight">{area.title}</h3>
-              <p className="text-muted-foreground leading-relaxed text-base font-quicksand">{area.description}</p>
+              <h3 className="text-2xl font-quicksand font-bold mb-6 text-primary text-center">
+                {area.title}
+              </h3>
+              <p className="text-muted-foreground leading-relaxed text-base font-quicksand text-center">
+                {area.description}
+              </p>
             </div>
           ))}
         </div>
@@ -46,5 +53,4 @@ const FocusAreas = () => {
     </section>
   );
 };
-
 export default FocusAreas;
