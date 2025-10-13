@@ -35,12 +35,12 @@ const FocusAreas = () => {
           {areas.map((area, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-3xl p-12 shadow-sm hover:shadow-xl transition-all duration-300 hover:scale-105 hover:-translate-y-2 cursor-pointer group"
+              className="bg-white rounded-3xl p-12 shadow-sm transition-shadow duration-300 hover:shadow-lg"
             >
-              <div className="flex items-center justify-center w-40 h-40 mb-8 mx-auto transition-transform duration-300 group-hover:scale-110">
+              <div className="flex items-center justify-center w-40 h-40 mb-8 mx-auto">
                 <img src={area.icon} alt={area.title} className="w-full h-full object-contain" />
               </div>
-              <h3 className="text-2xl font-quicksand font-bold mb-6 text-primary text-center transition-colors duration-300 group-hover:text-accent">
+              <h3 className="text-2xl font-quicksand font-bold mb-6 text-primary text-center">
                 {area.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed text-base font-quicksand text-center">
@@ -53,4 +53,5 @@ const FocusAreas = () => {
     </section>
   );
 };
+
 export default FocusAreas;
