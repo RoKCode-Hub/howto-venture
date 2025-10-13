@@ -2,7 +2,7 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import FocusAreas from "@/components/FocusAreas";
-import Approach from "@/components/Approach";
+import ApproachSection from "@/components/ApproachSection";
 import TestimonialSlider from "@/components/TestimonialSlider";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -14,7 +14,7 @@ const Index = () => {
       <Hero />
       <About />
       <FocusAreas />
-      <Approach />
+      <ApproachSection />
       <TestimonialSlider />
       <Contact />
       <Footer />
