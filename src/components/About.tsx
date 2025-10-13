@@ -3,17 +3,17 @@ import profileImage from "@/assets/about-profile.jpg";
 const About = () => {
   return (
     <section id="about" className="relative overflow-hidden">
-      <div className="grid md:grid-cols-2">
-        {/* Left Column - Image */}
-        <div className="relative min-h-[600px] md:min-h-full bg-black">
+      <div className="grid md:grid-cols-2 min-h-[700px]">
+        {/* Left Column - Image with diagonal accent */}
+        <div className="relative bg-black overflow-hidden">
           <img
             src={profileImage}
-            alt="Professional profile"
-            className="absolute inset-0 w-full h-full object-cover"
+            alt="Professional portrait"
+            className="w-full h-full object-cover grayscale"
           />
-          {/* Coral diagonal accent */}
+          {/* Coral diagonal accent overlay */}
           <div 
-            className="absolute bottom-0 right-0 w-64 h-64 bg-accent opacity-90"
+            className="absolute bottom-0 right-0 w-80 h-80 bg-accent"
             style={{
               clipPath: 'polygon(0 100%, 100% 0, 100% 100%)'
             }}
@@ -21,11 +21,11 @@ const About = () => {
         </div>
 
         {/* Right Column - Content */}
-        <div className="bg-primary text-white py-24 px-12 lg:px-20">
-          <div className="max-w-xl">
-            <h2 className="text-[43px] font-bold mb-12">About</h2>
+        <div className="bg-primary text-primary-foreground flex items-center py-20 px-12 lg:px-24">
+          <div className="max-w-xl space-y-12">
+            <h2 className="text-5xl lg:text-6xl font-bold">About</h2>
 
-            <div className="space-y-8 text-base leading-relaxed">
+            <div className="space-y-8 text-lg leading-relaxed">
               <p>
                 We help entrepreneurs and visionaries realize their greatest entrepreneurial aspirations.
               </p>
