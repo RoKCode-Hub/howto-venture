@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { MapPin, Mail, Phone } from "lucide-react";
 import { z } from "zod";
 import { useToast } from "@/hooks/use-toast";
@@ -113,12 +114,12 @@ const Contact = () => {
               >
                 Imprint
               </a>
-              <a 
-                href="#" 
+              <Link 
+                to="/privacy-policy" 
                 className="block text-base font-quicksand hover:text-accent transition-colors underline"
               >
                 Data privacy
-              </a>
+              </Link>
             </div>
           </div>
 
