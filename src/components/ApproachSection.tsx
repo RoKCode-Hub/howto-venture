@@ -35,12 +35,14 @@ const ApproachSection = () => {
         </div>
 
         {/* Right Column - Image */}
-        <div className="relative min-h-[600px] md:min-h-full">
+        <div className="relative min-h-[600px] md:min-h-full overflow-hidden">
           <img
             src={approachImage}
             alt="Partnership and support"
             className="absolute inset-0 w-full h-full object-cover"
           />
+          {/* Orange diagonal accent overlay */}
+          <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/40 origin-top-right transform skew-x-[-10deg] translate-x-[115%]"></div>
         </div>
       </div>
     </section>
