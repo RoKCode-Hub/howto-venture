@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <footer className="bg-white text-foreground py-4 text-center text-xs">
-      © 2024 Robin Gehlhar
+    <footer className="bg-white py-8">
+      {/* Minimal footer matching the original Wix site */}
     </footer>
   );
 };
