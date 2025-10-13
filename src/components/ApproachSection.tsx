@@ -41,13 +41,6 @@ const ApproachSection = () => {
             alt="Partnership and support"
             className="absolute inset-0 w-full h-full object-cover"
           />
-          {/* Coral accent triangle */}
-          <div 
-            className="absolute bottom-0 right-0 w-64 h-64 bg-accent opacity-90"
-            style={{
-              clipPath: 'polygon(100% 0, 100% 100%, 0 100%)'
-            }}
-          />
         </div>
       </div>
     </section>
