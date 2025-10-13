@@ -21,11 +21,11 @@ const About = () => {
         </div>
 
         {/* Right Column - Content */}
-        <div className="bg-navy-dark text-white py-24 px-12 lg:px-20">
+        <div className="bg-primary text-white py-24 px-12 lg:px-20">
           <div className="max-w-xl">
-            <h2 className="text-[43px] font-quicksand font-bold mb-12">About</h2>
+            <h2 className="text-[43px] font-bold mb-12">About</h2>
 
-            <div className="space-y-8 text-base leading-relaxed font-quicksand">
+            <div className="space-y-8 text-base leading-relaxed">
               <p>
                 We help entrepreneurs and visionaries realize their greatest entrepreneurial aspirations.
               </p>
