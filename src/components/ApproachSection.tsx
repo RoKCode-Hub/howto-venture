@@ -42,7 +42,7 @@ const ApproachSection = () => {
             className="absolute inset-0 w-full h-full object-cover"
           />
           {/* Orange diagonal accent overlay */}
-          <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/40 origin-top-right transform skew-x-[-10deg] translate-x-[115%]"></div>
+          <div className="absolute top-0 right-0 w-1/3 h-full bg-accent/50 origin-top-right transform skew-x-[-10deg] translate-x-[115%]"></div>
         </div>
       </div>
     </section>
