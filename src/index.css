@@ -9,24 +9,24 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 215 25% 20%;
+    --foreground: 243 94% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 28% 17%;
+    --card-foreground: 243 94% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 28% 17%;
+    --popover-foreground: 243 94% 11%;
 
-    --primary: 215 50% 12%;
+    --primary: 243 94% 11%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 214 32% 91%;
-    --secondary-foreground: 215 28% 17%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 243 94% 11%;
 
-    --muted: 210 40% 96.1%;
+    --muted: 215 16% 47%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 6 78% 66%;
+    --accent: 5 78% 64%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -34,13 +34,13 @@ All colors MUST be HSL.
 
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 215 50% 12%;
+    --ring: 243 94% 11%;
 
     --radius: 0.5rem;
 
-    /* Custom design tokens */
-    --navy-dark: 215 50% 8%;
-    --navy-medium: 215 40% 20%;
+    /* Custom design tokens - exact colors from Wix (#0D0630 and #EE6352) */
+    --navy-dark: 243 94% 11%;
+    --navy-medium: 240 50% 15%;
   }
 
   .dark {

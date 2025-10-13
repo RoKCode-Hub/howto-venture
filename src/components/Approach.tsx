@@ -2,14 +2,14 @@ import approachImage from "@/assets/approach-image.png";
 
 const Approach = () => {
   return (
-    <section id="approach" className="py-20 bg-secondary/20">
+    <section id="approach" className="py-24 bg-white">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-foreground">
+        <h2 className="text-[43px] font-quicksand font-bold text-center mb-20 text-navy-dark">
           Approach
         </h2>
 
-        <div className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
-          <div className="space-y-6 text-lg leading-relaxed text-foreground order-2 md:order-1">
+        <div className="grid md:grid-cols-2 gap-20 items-start max-w-6xl mx-auto">
+          <div className="space-y-6 text-base leading-[1.6em] font-quicksand text-navy-dark">
             <p>
               Our approach is hands-on and focused on making you a more impactful leader. Working on
               your highest points of leverage involves doubling down on your strengths, but also
@@ -29,11 +29,11 @@ const Approach = () => {
             </p>
           </div>
 
-          <div className="order-1 md:order-2">
+          <div className="flex justify-center">
             <img 
               src={approachImage} 
               alt="Approach illustration" 
-              className="w-full h-auto max-w-md mx-auto"
+              className="w-full max-w-md h-auto"
             />
           </div>
         </div>

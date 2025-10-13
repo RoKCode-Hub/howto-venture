@@ -25,20 +25,20 @@ const FocusAreas = () => {
   ];
 
   return (
-    <section id="focus" className="py-20 bg-white">
+    <section id="focus" className="py-24 bg-white">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-foreground">
+        <h2 className="text-[43px] font-quicksand font-bold text-center mb-20 text-navy-dark">
           Focus areas
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-16 max-w-6xl mx-auto">
           {areas.map((area, index) => (
             <div key={index} className="text-center">
-              <div className="inline-flex items-center justify-center w-32 h-32 mb-6">
+              <div className="inline-flex items-center justify-center w-40 h-40 mb-8">
                 <img src={area.icon} alt={area.title} className="w-full h-full object-contain" />
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-foreground">{area.title}</h3>
-              <p className="text-muted-foreground leading-relaxed text-base">{area.description}</p>
+              <h3 className="text-[43px] font-quicksand font-bold mb-6 text-navy-dark leading-tight">{area.title}</h3>
+              <p className="text-muted-foreground leading-relaxed text-base font-quicksand">{area.description}</p>
             </div>
           ))}
         </div>
