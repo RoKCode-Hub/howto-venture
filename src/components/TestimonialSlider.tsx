@@ -55,7 +55,7 @@ const TestimonialSlider = () => {
     <section className="py-24 bg-secondary/20 relative">
       <div className="container mx-auto px-6">
         <h2 className="text-[43px] font-quicksand font-bold text-center mb-16 text-navy-dark leading-relaxed">
-          What founders and leaders say about our collaboration
+          What founders & leaders say about our collaboration
         </h2>
 
         <div className="relative max-w-6xl mx-auto">
