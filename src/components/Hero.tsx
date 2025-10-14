@@ -28,7 +28,7 @@ const Hero = () => {
             
             <button
               onClick={scrollToAbout}
-              className="bg-accent hover:bg-accent/90 text-white font-semibold px-10 py-4 text-sm tracking-wider rounded-full transition-all duration-300 ease-out hover:scale-110 hover:shadow-[0_10px_40px_rgba(238,99,82,0.5)] active:scale-95 uppercase"
+              className="bg-accent hover:bg-accent/90 text-white font-semibold px-10 py-4 text-sm tracking-wider rounded-full transition-all duration-300 ease-out hover:scale-105 hover:shadow-[0_8px_30px_rgba(238,99,82,0.4)] active:scale-95 uppercase"
             >
               LEARN MORE
             </button>
