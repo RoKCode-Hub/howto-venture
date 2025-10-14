@@ -29,11 +29,11 @@ const CookieConsent = () => {
       <div className="container mx-auto px-4 py-6 sm:px-6">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="flex-1">
-            <h3 className="text-sm font-semibold text-foreground mb-2">Cookie-Einstellungen</h3>
+            <h3 className="text-sm font-semibold text-foreground mb-2">Cookie Settings</h3>
             <p className="text-sm text-muted-foreground">
-              Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. 
-              Diese Website verwendet nur technisch notwendige Cookies für die grundlegende Funktionalität. 
-              Keine Tracking- oder Analyse-Cookies werden ohne Ihre Zustimmung verwendet.
+              We use cookies to improve your experience on our website. 
+              This site only uses technically necessary cookies for basic functionality. 
+              No tracking or analytics cookies are used without your consent.
             </p>
           </div>
           
@@ -44,14 +44,14 @@ const CookieConsent = () => {
               onClick={handleDecline}
               className="whitespace-nowrap"
             >
-              Ablehnen
+              Decline
             </Button>
             <Button
               size="sm"
               onClick={handleAccept}
               className="whitespace-nowrap"
             >
-              Akzeptieren
+              Accept
             </Button>
           </div>
         </div>
