@@ -5,6 +5,7 @@ import FocusAreas from "@/components/FocusAreas";
 import ApproachSection from "@/components/ApproachSection";
 import TestimonialSlider from "@/components/TestimonialSlider";
 import Contact from "@/components/Contact";
+import CookieConsent from "@/components/CookieConsent";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <ApproachSection />
       <TestimonialSlider />
       <Contact />
+      <CookieConsent />
     </div>
   );
 };
