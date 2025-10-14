@@ -5,7 +5,6 @@ import FocusAreas from "@/components/FocusAreas";
 import ApproachSection from "@/components/ApproachSection";
 import TestimonialSlider from "@/components/TestimonialSlider";
 import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -17,7 +16,6 @@ const Index = () => {
       <ApproachSection />
       <TestimonialSlider />
       <Contact />
-      <Footer />
     </div>
   );
 };
